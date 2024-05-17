@@ -1,0 +1,104 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Sites</a></li>
+    <li class="breadcrumb-item active" aria-current="page">UH-SITE-001</li>
+  </ol>
+</nav>
+
+<div class="card add-new-site">
+  <h4 class="card-header d-flex justify-content-between">
+    <span>UH-SITE-001</span>
+    <span class="badge text-bg-success font-14 py-2"
+      >10 participant enrolled</span
+    >
+  </h4>
+
+  <div class="card-body">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="info-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#info-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="info-tab-pane"
+          aria-selected="true"
+        >
+          <i class="bi bi-info-circle"></i> Site Information
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="devices-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#devices-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="devices-tab-pane"
+          aria-selected="false"
+        >
+          <i class="bi bi-gear"></i> Clinical devices
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="info-tab-pane"
+        role="tabpanel"
+        aria-labelledby="info-tab"
+        tabindex="0"
+      >
+        <app-site-overview-info></app-site-overview-info>
+        <div class="text-end mt-4">
+          <span class="text-danger me-5"
+            ><i class="bi bi-x-circle-fill me-1"></i> Delete Site</span
+          >
+          <button class="btn btn-success">Update</button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="devices-tab-pane"
+        role="tabpanel"
+        aria-labelledby="devices-tab"
+        tabindex="0"
+      >
+        <app-clinical-devices></app-clinical-devices>
+      </div>
+    </div>
+
+    <!-- <mat-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup" label="Site Information">
+        <form [formGroup]="firstFormGroup">
+          
+
+          <div class="text-end mt-4">
+            <span class="text-danger me-5"
+              ><i class="bi bi-x-circle-fill me-1"></i> Delete Site</span
+            >
+
+            <button mat-button matStepperNext class="btn btn-success">
+              Update <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="fourFormGroup">
+        <ng-template matStepLabel>Clinical devices</ng-template>
+     
+
+        <div class="d-flex justify-content-between mt-5">
+          <button mat-button matStepperPrevious class="btn btn-success">
+            <i class="bi bi-arrow-left me-1"></i> Back
+          </button>
+          <button mat-button class="btn btn-success">Submit</button>
+        </div>
+      </mat-step>
+    </mat-stepper> -->
+  </div>
+</div>
