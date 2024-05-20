@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { routes } from './app.routes';
     FormsModule,
     CommonModule,
     RouterModule.forRoot(routes),
+    FullCalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

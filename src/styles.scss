@@ -715,3 +715,32 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
+
+.pagination {
+    .page-link {
+        color: #4d6b7e;
+        border-radius: 50% !important;
+        width: 35px;
+        height: 35px;
+        margin: 0 8px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .active {
+        .page-link {
+            color: #fff;
+            border: 1px solid #4d6b7e;
+            background: #4d6b7e;
+        }
+    }
+}
+
+.nav-pills {
+    .nav-link {
+        color: #4d6b7e;
+
+        &.active {
+            background: #4d6b7e;
+        }
+    }
+}

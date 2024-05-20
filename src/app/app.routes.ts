@@ -10,6 +10,8 @@ import { SiteListComponent } from './sites/site-list/site-list.component';
 import { AddNewParticipantComponent } from './participants/add-new-participant/add-new-participant.component';
 import { ParticipantOverviewComponent } from './participants/participant-overview/participant-overview.component';
 import { ParticipantListComponent } from './participants/participant-list/participant-list.component';
+import { MyVisitsComponent } from './visits/my-visits/my-visits.component';
+import { VisitDataComponent } from './visits/visit-data/visit-data.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/add-new-study', pathMatch: 'full' },
@@ -24,4 +26,6 @@ export const routes: Routes = [
   { path: 'add-new-participant', component: AddNewParticipantComponent },
   { path: 'participant-overview', component: ParticipantOverviewComponent },
   { path: 'participant-list', component: ParticipantListComponent },
+  { path: 'my-visits', component: MyVisitsComponent },
+  { path: 'visit-data', component: VisitDataComponent },
 ];
