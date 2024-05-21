@@ -744,3 +744,48 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
+
+.fc-scrollgrid .fc-col-header a {
+    color: #4d6b7e;
+    font-weight: 600 !important;
+    font-family: "Work Sans", sans-serif !important;
+}
+
+.fc-scrollgrid .fc-daygrid-body a {
+    color: #888;
+}
+
+.fc-h-event .fc-event-title-container {
+    padding: 3px 8px;
+    text-align: center;
+}
+
+.fc-scrollgrid thead tr th {
+    background: #f5f5f5;
+}
+
+.fc-button-group .fc-button-primary,
+.fc-button-group .fc-button-primary:hover {
+    color: #2e9c0a !important;
+    background: #f5f5f5 !important;
+    border-color: #b7bbc0;
+}
+
+.fc-button-group .fc-button-primary:not(:disabled).fc-button-active,
+.fc-today-button {
+    color: #fff !important;
+    background: #2e9c0a !important;
+}
+
+.fc .fc-button {
+    padding: 0.2em 0.65em;
+}
+
+.fc .fc-button-primary:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+
+.fc-toolbar-title {
+    font-size: 16px !important;
+}

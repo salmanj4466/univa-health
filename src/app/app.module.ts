@@ -12,6 +12,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    NgModule,
     FormsModule,
     CommonModule,
     RouterModule.forRoot(routes),
