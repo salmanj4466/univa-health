@@ -225,6 +225,10 @@ ul {
     border-radius: 8px;
     margin-bottom: 25px;
 
+    @include media(md) {
+        margin-bottom: 20px;
+    }
+
     .breadcrumb-item {
         a {
             color: #828690;
@@ -256,10 +260,19 @@ ul {
         align-items: center;
         color: #4d6b7e;
         font-size: 22px;
+
+        @include media(md) {
+            padding: 14px 20px;
+            font-size: 18px;
+        }
     }
 
     .card-body {
         padding: 30px;
+
+        @include media(md) {
+            padding: 20px;
+        }
 
         h5 {
             font-size: 18px;
@@ -298,17 +311,31 @@ ul {
 
 .sidebar {
     position: fixed;
-    width: 180px;
+    width: 180px !important;
     top: 0;
     padding: 20px 0;
     z-index: 9999;
     background-color: #fff;
     transition: all 0.2s ease;
+    border: 0 !important;
     box-shadow: 0rem 0.9375rem 1.875rem 0rem rgba(0, 0, 0, 0.02);
     height: 100%;
 
-    @include media(md) {
-        display: none;
+    @include media(lg) {
+        box-shadow: 0rem 0.9375rem 1.875rem 0rem rgb(0 0 0 / 11%);
+    }
+
+    @include media(min-md) {
+        transform: none !important;
+        visibility: visible;
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        z-index: 9;
+        font-size: 13px;
     }
 
     .accordion {
@@ -382,14 +409,6 @@ ul {
                         }
                     }
 
-                    // &:after {
-                    //     content: "\f270";
-                    //     display: inline-block;
-                    //     font-family: bootstrap-icons !important;
-                    //     font-weight: normal !important;
-                    //     text-align: right;
-                    //     background-image: none;
-                    // }
                     i {
                         font-size: 30px;
                         position: relative;
@@ -440,6 +459,10 @@ header {
             padding: 10px 10px;
         }
 
+        .bi-list {
+            font-size: 20px;
+        }
+
         form {
             position: relative;
             .form-control {
@@ -482,6 +505,7 @@ header {
                 border: 0;
                 box-shadow: 0 2px 10px #00000014;
                 border-radius: 5px;
+                position: absolute;
 
                 a {
                     font-size: 14px;
@@ -547,6 +571,10 @@ body::-webkit-scrollbar-thumb {
 
 .mat-horizontal-content-container {
     padding: 24px 24px 5px !important;
+
+    @include media(sm) {
+        padding: 24px 15px 5px !important;
+    }
 }
 
 .mdc-button {
@@ -686,6 +714,30 @@ body::-webkit-scrollbar-thumb {
             margin-right: 5px;
         }
     }
+
+    li {
+        @include media(sm) {
+            border: 1px solid #e1dfdf;
+            width: 50%;
+            border-bottom: 0;
+        }
+
+        @include media(xs) {
+            width: 100%;
+        }
+    }
+
+    .nav-link {
+        @include media(md) {
+            width: 100%;
+            border-radius: 0;
+
+            &.active {
+                border: 0;
+                background: #4d6b7e12;
+            }
+        }
+    }
 }
 
 .modal {
@@ -766,7 +818,7 @@ body::-webkit-scrollbar-thumb {
 
 .fc-button-group .fc-button-primary,
 .fc-button-group .fc-button-primary:hover {
-    color: #2e9c0a !important;
+    color: #10dfd7 !important;
     background: #f5f5f5 !important;
     border-color: #b7bbc0;
 }
@@ -774,7 +826,8 @@ body::-webkit-scrollbar-thumb {
 .fc-button-group .fc-button-primary:not(:disabled).fc-button-active,
 .fc-today-button {
     color: #fff !important;
-    background: #2e9c0a !important;
+    background: #10dfd7 !important;
+    border: 1px solid #10dfd7;
 }
 
 .fc .fc-button {
@@ -788,4 +841,44 @@ body::-webkit-scrollbar-thumb {
 
 .fc-toolbar-title {
     font-size: 16px !important;
+}
+
+.measure-list {
+    li {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: 120px;
+        }
+    }
+}
+
+.mat-horizontal-stepper-header {
+    @include media(md) {
+        padding: 0 10px !important;
+    }
+}
+
+.table-responsive {
+    .table {
+        @include media(md) {
+            width: 800px;
+        }
+    }
+
+    &.table-large {
+        .table {
+            @include media(lg) {
+                width: 1100px;
+            }
+        }
+    }
+}
+
+.fc .fc-toolbar {
+    @include media(sm) {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

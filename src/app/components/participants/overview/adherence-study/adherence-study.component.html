@@ -2,9 +2,9 @@
 <hr class="mt-2 mb-4" />
 
 <div class="row align-items-center mb-4">
-  <div class="col-md-8">
+  <div class="col-md-6 col-lg-6 col-xl-7">
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-6 col-xl-7">
         <div
           class="progress"
           role="progressbar"
@@ -19,17 +19,17 @@
           ></div>
         </div>
       </div>
-      <div class="col-md-5">
-        <p class="mb-0">X / # of weeks completed</p>
+      <div class="col-md-6 col-xl-5">
+        <p class="mt-2 mt-md-0 mb-3 mb-md-0">X / # of weeks completed</p>
       </div>
     </div>
   </div>
-  <div class="col-md-4 text-end">
+  <div class="col-md-6 col-lg-6 col-xl-5 text-end">
     <button
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#completeStudy"
-      class="btn btn-outline-info me-3"
+      class="btn btn-outline-info me-3 px-3"
     >
       Complete study
     </button>
@@ -37,7 +37,7 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#dropOut"
-      class="btn btn-outline-danger"
+      class="btn btn-outline-danger px-3"
     >
       Drop out
     </button>
@@ -68,8 +68,8 @@
 <hr class="mt-2 mb-4" />
 
 <div class="row align-items-end mb-4">
-  <div class="col-md-5">
-    <div class="form-group mb-0">
+  <div class="col-sm-6 col-md-4 col-xl-5">
+    <div class="form-group mb-3 mb-sm-0">
       <label class="form-label">Study member</label>
       <select class="form-select">
         <option selected>Select study member</option>
@@ -78,7 +78,7 @@
       </select>
     </div>
   </div>
-  <div class="col-md-5">
+  <div class="col-sm-6 col-md-4 col-xl-5">
     <div class="form-group mb-0">
       <label class="form-label">Status</label>
       <select class="form-select">
@@ -88,85 +88,86 @@
       </select>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-4 col-xl-2">
     <button
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#scheduleVisit"
-      class="btn btn-success px-3 mb-1"
+      class="btn btn-success px-3 mb-1 mt-3 mt-md-0"
     >
       <i class="bi bi-plus"></i> New Visit
     </button>
   </div>
 </div>
 
-<table class="table table-bordered table-responsive mb-2">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Study member</th>
-      <th>Status</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>26/02/2024</td>
-      <td>Study member #1</td>
-      <td><span class="text-green">Completed</span></td>
-      <td>
-        <a routerLink="/study-overview" class="btn btn-outline-success px-3">
-          View details
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>05/01/2025</td>
-      <td>Study member #1</td>
-      <td><span class="text-info">Schedule</span></td>
-      <td>
-        <button
-          type="button"
-          data-bs-toggle="modal"
-          data-bs-target="#rescheduleVisit"
-          class="btn btn-success px-3 mx-1"
-        >
-          Re-schedule
-        </button>
-        <button
-          type="button"
-          data-bs-toggle="modal"
-          data-bs-target="#cancelVisit"
-          class="text-danger"
-          class="btn btn-danger px-4 mx-1"
-        >
-          Cancel
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>13/02/2025</td>
-      <td>Study member #2</td>
-      <td><span class="text-warning">In-progress</span></td>
-      <td>
-        <a routerLink="/study-overview" class="btn btn-outline-success px-3">
-          View details
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>02/03/2025</td>
-      <td>Study member #1</td>
-      <td><span class="text-warning">In-progress</span></td>
-      <td>
-        <a routerLink="/study-overview" class="btn btn-outline-success px-3">
-          View details
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="table-responsive">
+  <table class="table table-bordered mb-2">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Study member</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>26/02/2024</td>
+        <td>Study member #1</td>
+        <td><span class="text-green">Completed</span></td>
+        <td>
+          <a routerLink="/study-overview" class="btn btn-outline-success px-3">
+            View details
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>05/01/2025</td>
+        <td>Study member #1</td>
+        <td><span class="text-info">Schedule</span></td>
+        <td>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#rescheduleVisit"
+            class="btn btn-success px-3 mx-1"
+          >
+            Re-schedule
+          </button>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#cancelVisit"
+            class="text-danger"
+            class="btn btn-danger px-4 mx-1"
+          >
+            Cancel
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>13/02/2025</td>
+        <td>Study member #2</td>
+        <td><span class="text-warning">In-progress</span></td>
+        <td>
+          <a routerLink="/study-overview" class="btn btn-outline-success px-3">
+            View details
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>02/03/2025</td>
+        <td>Study member #1</td>
+        <td><span class="text-warning">In-progress</span></td>
+        <td>
+          <a routerLink="/study-overview" class="btn btn-outline-success px-3">
+            View details
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <!-- Cancel Visit -->
 <div
   class="modal fade"

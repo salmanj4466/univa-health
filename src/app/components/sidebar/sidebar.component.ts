@@ -19,9 +19,9 @@ export class SidebarComponent {
     config.closeOthers = true;
   }
 
-  // isSidebarOpen: boolean = false;
+  isSidebarOpen: boolean = false;
 
-  // toggleSidebar() {
-  //   this.isSidebarOpen = !this.isSidebarOpen;
-  // }
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 }
